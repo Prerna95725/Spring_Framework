@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.AmbiguityProblemResolve.Addition" name="Add">
+<constructor-arg name="a" value="12" type="int" ></constructor-arg>
+<constructor-arg name="b" value="72" type="int" ></constructor-arg>
+</bean>
+</beans>
+
+<!-- value mai jo data hai wo string string find krta hai isliye to top per
+nah ja kr string constructor wale ko print kiya(by default it choose string value)
+
+agr hm string addition class mai define ni krte to wo top wale jo v
+ constructor hote usse print krta jaise isme public Addition(int a, int b) ise krta
+ 
+ to hm is Ambiguity problem ko solve krne k liye hm xml page mai 2 attribute use krege
+ 1.type
+ 2.index
+ isse hm mann cahhahe constructor ko call kr skte hai-->

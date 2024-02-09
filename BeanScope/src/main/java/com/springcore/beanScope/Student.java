@@ -1,0 +1,35 @@
+package com.springcore.beanScope;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("singleton")
+public class Student {
+	@Value("Prerna")
+	private String studentName;
+	@Value("Dhanbad")
+	private String Address;
+	public String getStudentName() {
+	
+		return studentName;
+	}
+	public void setStudentName(String studentName) {
+		
+		this.studentName = studentName;
+	}
+	public String getAddress() {
+		return Address;
+	}
+	public void setAddress(String address) {
+		Address = address;
+	}
+	@Override
+	public String toString() {
+		return "Student [studentName=" + studentName + ", Address=" + Address + "]";
+	}
+	
+	
+
+}

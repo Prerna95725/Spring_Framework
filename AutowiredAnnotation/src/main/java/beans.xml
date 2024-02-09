@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+ <context:annotation-config></context:annotation-config>
+
+
+<bean class="com.autowired.annotation.Address" name="address1">
+<property name="street" value="Temp Street"></property>
+<property name="city" value="delhi"></property>
+</bean>
+
+<bean class="com.autowired.annotation.Address" name="address2">
+<property name="street" value="Second Street"></property>
+<property name="city" value="kanpur"></property>
+</bean>
+
+
+<bean class="com.autowired.annotation.Emp" name="emp" >
+<!-- byName used jub v spring ^ ish class k object banaiye ga to dekhega uske pass address type
+ k bean hai ya ni agr millega to print krega ni to null value dega....
+ -->
+</bean>
+<!-- <bean class="com.springcore.autowiring.Emp" name="emp" autowire="byType"></bean>
+when we use byType it check class=(com.springcore.autowiring.Address) path is type of address .
+ -->
+</beans>

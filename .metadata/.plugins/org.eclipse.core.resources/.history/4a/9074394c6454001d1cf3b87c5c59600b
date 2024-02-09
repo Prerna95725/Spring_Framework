@@ -1,0 +1,31 @@
+package com.springcore.beanScope;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Student {
+	
+	private String studentName;
+	private String Address;
+	public String getStudentName() {
+		System.out.println("ji");
+		return studentName;
+	}
+	public void setStudentName(String studentName) {
+		
+		this.studentName = studentName;
+	}
+	public String getAddress() {
+		return Address;
+	}
+	public void setAddress(String address) {
+		Address = address;
+	}
+	@Override
+	public String toString() {
+		return "Student [studentName=" + studentName + ", Address=" + Address + "]";
+	}
+	
+	
+
+}

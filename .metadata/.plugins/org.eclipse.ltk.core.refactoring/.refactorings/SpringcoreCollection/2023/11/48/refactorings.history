@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SpringcoreCollection/src/main/java/com/springcore/collection/beans.xml&apos; to &apos;col.xml&apos;" description="Rename resource &apos;beans.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/com/springcore/collection/beans.xml" name="col.xml" stamp="1701372437452" updateReferences="true"/>
+</session>

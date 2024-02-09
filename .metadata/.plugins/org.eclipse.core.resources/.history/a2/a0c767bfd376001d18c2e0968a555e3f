@@ -1,0 +1,58 @@
+package com.SpringBootJpa;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+
+import com.SpringBootJpa.Model.User;
+import com.SpringBootJpa.Repository.UserRepository;
+
+
+@SpringBootApplication
+public class SpringBootJpaApplication {
+
+	public static void main(String[] args) {
+		
+	ApplicationContext context =	SpringApplication.run(SpringBootJpaApplication.class, args);
+	
+	UserRepository userRepository = context.getBean(UserRepository.class);
+	
+	User user= new User();
+	user.setName("prerna");
+	user.setCity("dhanbad");		
+	user.setStatus("java programmer");
+	
+	User user1= new User();
+	user1.setName("komal");
+	user1.setCity("bokaro");		
+	user1.setStatus("married");
+	
+	User user2= new User();
+	user2.setName("saurav");
+	user2.setCity("bokaro");		
+	user2.setStatus("employee");
+	
+	/*saving single user
+	User use = userRepository.save(user1);*/
+	
+	//saving multiple user
+	 
+	List<User> users = Arrays.asList(user,user1,user2);
+	Iterable<User> result = userRepository.saveAll(users);
+	
+	
+		System.out.println(result);
+	
+	
+	List<User> sky = userRepository.findByCity("bokaro");
+	
+	System.out.println(sky);
+	System.out.println("");
+    
+	}
+
+}
